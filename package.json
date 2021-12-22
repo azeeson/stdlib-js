@@ -28,7 +28,7 @@
         "coverage": "jest --coverage",
         "prepatch": "npm run build",
         "patch": "npm version --no-commit-hooks patch",
-        "push": "git push && npm publish",
+        "push": "git push --tags && npm publish",
         "test": "jest"
     },
     "types": "lib/index.d.ts",

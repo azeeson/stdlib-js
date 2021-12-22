@@ -5,9 +5,12 @@ import {
     isArray,
     isFunction,
     isObject,
-    isPlainObject
+    isPlainObject,
+    isEmpty,
+    isNotEmpty
 } from './base-utils/index';
 
+import {noop, calls} from './func-utils/index';
 
 export {
     EventManager,
@@ -15,6 +18,9 @@ export {
     isFunction,
     isObject,
     isPlainObject,
+    isEmpty,
+    isNotEmpty,
+    noop, calls,
     parseDate,
     dateToTimestamp,
     formatDate,
