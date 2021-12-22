@@ -1,0 +1,6 @@
+/src
+/tests
+
+.DS_Store
+npm-debug.log
+*.test.ts

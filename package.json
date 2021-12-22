@@ -1,0 +1,36 @@
+{
+    "author": {
+        "name": "Azeeson"
+    },
+    "bugs": {
+        "url": "https://github.com/azeeson/stdlib-js/issues"
+    },
+    "bundleDependencies": false,
+    "deprecated": false,
+    "description": "In work...",
+    "devDependencies": {
+        "@types/jest": "^27.0.3",
+        "jest": "^27.4.5",
+        "ts-jest": "^27.1.2",
+        "ts-node": "10.4.0",
+        "typescript": "4.5.4"
+    },
+    "homepage": "http://stdlib-js.com/",
+    "license": "MIT",
+    "main": "lib/index.js",
+    "name": "slib-js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/azeeson/stdlib-js.git"
+    },
+    "scripts": {
+        "build": "tsc",
+        "coverage": "jest --coverage",
+        "prepatch": "npm run build",
+        "patch": "npm version --no-commit-hooks patch",
+        "push": "git push && npm publish",
+        "test": "jest"
+    },
+    "types": "lib/index.d.ts",
+    "version": "0.1.0"
+}

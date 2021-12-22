@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "lib": ["es2017", "es7", "es6", "dom"],
+        "moduleResolution": "node",
+        "sourceMap": false,
+        "declaration": true,
+        "removeComments": false,
+        "outDir": "lib",
+        /* Enable all strict type-checking options. */
+        "strict": true,
+        "alwaysStrict": true,
+        "esModuleInterop": true,
+        "preserveConstEnums": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": false,
+        "baseUrl": "./src",
+        "skipLibCheck": true /* Skip type checking of declaration files. */,
+    },
+    "include": [
+        "src",
+        "src/**/*",
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules/**/*",
+        "lib",
+        // "*.test.ts",
+        "src/**/*.test.ts",
+        // "src/**/*.spec.ts"
+    ]
+}
