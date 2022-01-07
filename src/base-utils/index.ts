@@ -9,6 +9,16 @@ export function isFunction<T>(fn: T): boolean {
     return fn && typeof fn === 'function';
 }
 
+export type Nulled<T> = T | null | undefined;
+
+export function isNil<T>(value: Nulled<T>): boolean {
+    return value === null || value === undefined;
+}
+
+export function isNotNil<T>(value: Nulled<T>): boolean {
+    return !isNil(value);
+}
+
 export function isEmpty<T>(entity: T): boolean {
     if (Array.isArray(entity)) {
         return entity.length === 0;
