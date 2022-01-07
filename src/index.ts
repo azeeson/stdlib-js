@@ -12,6 +12,8 @@ import {
 
 import {noop, calls} from './func-utils/index';
 
+import {subEventListener, preventDefaults} from './html-utils/index'
+
 export {
     EventManager,
     isArray,
@@ -24,6 +26,8 @@ export {
     parseDate,
     dateToTimestamp,
     formatDate,
-    formatDateTable
+    formatDateTable,
+    subEventListener,
+    preventDefaults
 };
 
