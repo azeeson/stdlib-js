@@ -28,6 +28,7 @@
         "lib",
         // "*.test.ts",
         "src/**/*.test.ts",
+        "src/temp.ts"
         // "src/**/*.spec.ts"
     ]
 }

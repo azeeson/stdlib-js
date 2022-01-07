@@ -56,3 +56,9 @@ type TEventListener<E extends HTMLElement, K extends keyof ElementEventMap<E>> =
         isFunction(listener) && element?.removeEventListener(type, listener as any, options);
     }
 }
+
+export function preventDefaults<E extends Event>(event: E): E {
+    event.preventDefault();
+    event.stopPropagation();
+    return event;
+}
