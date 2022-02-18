@@ -8,7 +8,7 @@ export class EventManager<T> {
         const idx = this.listeners.push(handler);
         return () => {
             this.listeners.splice(idx, 1);
-        }
+        };
     }
 
     unsubscribe(handler: TListenerFn<T>) {
@@ -18,7 +18,7 @@ export class EventManager<T> {
 
     push(data: T) {
         this.listeners.forEach(listener => {
-            listener(data)
-        })
+            listener(data);
+        });
     }
 }

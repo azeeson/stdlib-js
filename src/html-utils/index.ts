@@ -1,4 +1,4 @@
-import { isFunction } from "../base-utils/index";
+import {isFunction} from "../base-utils/index";
 
 interface ElementEventTarget extends EventTarget {
     dataset: DOMStringMap
@@ -14,8 +14,8 @@ interface ElementEvent extends Event {
  * @param {Event} event Событие.
  * @param {string} key Ключ.
  */
- export const getEventDataValue = <Event extends ElementEvent>(event: Event, key: string): string | null =>
- event?.currentTarget?.dataset?.[key] ?? null;
+export const getEventDataValue = <Event extends ElementEvent>(event: Event, key: string): string | null =>
+    event?.currentTarget?.dataset?.[key] ?? null;
 
 
 
@@ -26,12 +26,12 @@ export interface FileTargetEvent extends EventTarget {
     readonly files: FileList;
 }
 
-export interface FileEvent extends Event { 
+export interface FileEvent extends Event {
     readonly currentTarget: FileTargetEvent | null;
     readonly target: FileTargetEvent | null;
 }
 
-export interface DragZoneEvent<E> extends DragEvent { 
+export interface DragZoneEvent<E> extends DragEvent {
     readonly currentTarget: E & EventTarget;
 }
 
@@ -47,15 +47,15 @@ export type Error = any;
 
 type TEventListener<E extends HTMLElement, K extends keyof ElementEventMap<E>> = (ev: ElementEventMap<E>[K]) => any;
 
- export const subEventListener = <
+export const subEventListener = <
     E extends HTMLElement,
     K extends keyof ElementEventMap
 >(element: E | null, type: K, listener: TEventListener<E, K> | undefined, options?: boolean | EventListenerOptions): () => void => {
     isFunction(listener) && element?.addEventListener(type, listener as any, options);
     return function remove() {
         isFunction(listener) && element?.removeEventListener(type, listener as any, options);
-    }
-}
+    };
+};
 
 export function preventDefaults<E extends Event>(event: E): E {
     event.preventDefault();

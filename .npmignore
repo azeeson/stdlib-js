@@ -7,3 +7,5 @@ npm-debug.log
 *.test.ts
 temp.ts
 jest.config.ts
+.eslintrc.json
+.eslintignore
