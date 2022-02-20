@@ -14,7 +14,7 @@ describe("Tests: isArray", () => {
         expect(isArray(value)).toEqual(false);
     });
     test("Check for empty array", () => {
-        const value = [];
+        const value: null[] = [];
         expect(isArray(value)).toEqual(true);
     });
     test("Check for array", () => {

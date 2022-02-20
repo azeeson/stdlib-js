@@ -5,7 +5,7 @@ import {isArray} from "../base-utils/index";
  * @param value
  * @returns
  */
-export function isArrayNotEmpty<T>(value?: T[]): boolean {
+export function isArrayNotEmpty<T>(value?: T[] | null): boolean {
     return isArray(value) && value.length > 0;
 }
 
