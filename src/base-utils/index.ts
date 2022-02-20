@@ -1,5 +1,5 @@
-import {hasOwnProperty} from "object-utils";
 import {FuncAny} from "types";
+import {hasOwnProperty} from "../object-utils/index";
 
 export const isObject = (obj: unknown): obj is Object => isNotNil(obj) && typeof obj === 'object';
 
