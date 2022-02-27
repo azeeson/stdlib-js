@@ -1,2 +1,2 @@
 
-export type NotRequired<T> = T | undefined;
+export type NotRequired<T> = T | undefined | null;
