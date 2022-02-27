@@ -14,6 +14,7 @@ import {noop, calls, compose} from './func-utils/index';
 import {subEventListener, preventDefaults} from './html-utils/index';
 import {keys} from './object-utils/index';
 import {isArrayNotEmpty} from './array-utils/index';
+import {NotRequired} from './types/types';
 
 export {
     EventManager,
@@ -34,6 +35,7 @@ export {
     formatDate,
     formatDateTable,
     subEventListener,
-    preventDefaults
+    preventDefaults,
+    NotRequired
 };
 

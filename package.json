@@ -27,8 +27,9 @@
     },
     "scripts": {
         "build": "tsc",
+        "build:es": "tsc  -p ./tsconfig.es.json",
         "coverage": "jest --coverage",
-        "prepatch": "npm run build",
+        "prepatch": "npm run build && npm run build:es",
         "patch": "npm version --no-commit-hooks patch",
         "push": "git push --tags && npm publish",
         "lint": "./node_modules/.bin/eslint --ext .ts,.tsx .",
