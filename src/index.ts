@@ -1,6 +1,6 @@
-import {parseJson} from 'json-utils/parseJson';
-import {decycle} from 'json-utils/decycle';
-import {size} from 'base-utils/size';
+import {parseJson} from './json-utils/parseJson';
+import {decycle} from './json-utils/decycle';
+import {size} from './base-utils/size';
 import {EventManager} from './events';
 import {parseDate, dateToTimestamp, formatDate, formatDateTable} from './date-utils/index';
 import {
